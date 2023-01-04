@@ -49,10 +49,16 @@ node server\koa-server\index.js
 
 ## 注意
 
-主进程日志文件输出目录示例：C:\Users\Developer\AppData\Roaming\electron-quick-start\logs\main.log ，无法触发更新时，可查看该日志文件确定问题
-
-测试更新功能需分别打包两次：
+测试更新功能需分别打包**两次**：
 
 1.本地版本 1.0.0：修改 `package.json` 中的 `version` 为 1.0.0，然后执行打包命令 `npm run pack`，本地安装dist目录下生成的 `appName Setup 1.0.0.exe`安装包即可；
 
-2.远程最新版本 1.0.1：修改 `package.json` 中的 `version` 属性为最新版本，如 1.0.1，然后将dist目录下生成的最新版本 latest.yml、Tasky 1.0.1.msi、Tasky Setup 1.0.1.exe、Tasky Setup 1.0.1.exe.blockmap文件放到本地文件服务 server/koa-server/win32 目录下 或 远程文件服务地址下
+2.**远程最新版本 1.0.1**：修改 `package.json` 中的 `version` 属性为最新版本，如 1.0.1，
+然后将dist目录下生成的最新版本 `latest.yml`、`appName 1.0.1.msi`、`appName Setup 1.0.1.exe`、`appName Setup 1.0.1.exe.blockmap` 文件
+放到本地文件服务 `server/koa-server/win32` 目录下 或 远程文件服务地址下
+
+
+
+无法触发更新时，可查看主进程日志文件确定问题
+
+主进程日志文件输出目录示例：C:\Users\Developer\AppData\Roaming\electron-quick-start\logs\main.log ，
