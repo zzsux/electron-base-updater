@@ -38,3 +38,23 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 ## License
 
 [CC0 1.0 (Public Domain)](LICENSE.md)
+
+## 使用步骤
+
+```bash
+# 安装依赖
+npm install
+
+# 生成一系列打包所需的图标文件
+npm run build-icon
+
+# 运行应用
+npm start
+
+# 打包应用
+npm run pack
+```
+
+## 注意
+
+主进程日志文件输出目录示例：C:\Users\Developer\AppData\Roaming\electron-quick-start\logs\main.log

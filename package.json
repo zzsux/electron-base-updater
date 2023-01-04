@@ -1,10 +1,12 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-icon": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
+    "pack": "electron-builder"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +19,70 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^22.0.0"
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "electron-icon-builder": "^2.0.1"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.8",
+    "electron-updater": "^5.3.0",
+    "phantomjs-prebuilt": "^2.1.16"
+  },
+  "build": {
+    "appId": "your.appId",
+    "productName": "appName",
+    "copyright": "Copyright © 2023",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "msi",
+        "nsis"
+      ],
+      "icon": "build/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "language": "2052",
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "background": "build/background.jfif",
+      "icon": "build/icons/icon.icns",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 180,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 540,
+        "height": 380
+      }
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://127.0.0.1:9005/"
+      }
+    ]
   }
 }
