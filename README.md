@@ -2,7 +2,9 @@
 
 **Demo**
 
+![image](https://github.com/zzsux/electron-base-updater/blob/main/demo/demo.png)
 
+![image](https://github.com/zzsux/electron-base-updater/blob/main/demo/demo_new.png)
 
 **项目文档**
 
