@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-base-updater",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -41,7 +41,8 @@
         "msi",
         "nsis"
       ],
-      "icon": "build/icons/icon.ico"
+      "icon": "build/icons/icon.ico",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
     },
     "nsis": {
       "oneClick": false,

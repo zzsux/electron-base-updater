@@ -26,7 +26,8 @@ function checkUpdate(){
     autoUpdater.setFeedURL('http://127.0.0.1:9005/darwin');
   } else {
     // 设置要检测的Windows平台文件更新路径
-    autoUpdater.setFeedURL('http://127.0.0.1:9005/win32');
+    // autoUpdater.setFeedURL('http://127.0.0.1:9005/win32');
+    autoUpdater.setFeedURL('https://github.com/zzsux/electron-base-updater/releases/download/v1.0.0');
   }
   
   // 检测更新
